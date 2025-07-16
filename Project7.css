@@ -1,0 +1,128 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #00ffe7;
+}
+
+header h1 {
+  color: #00ffe7;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #00ffe7;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.project-details section {
+  margin-top: 2rem;
+}
+
+.project-details h2 {
+  color: #00ffe7;
+  margin-bottom: 0.7rem;
+  font-size: 1.8rem;
+}
+
+.project-details p, 
+.project-details ul {
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+.project-details ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* New showcase section - side by side layout */
+.showcase {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.screenshots {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.screenshots img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 255, 231, 0.3);
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.details {
+  flex: 1 1 45%;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 1.2rem 0;
+  border-top: 2px solid #00ffe7;
+  color: #00ffe7;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 700px) {
+  .showcase {
+    flex-direction: column;
+  }
+  .screenshots, .details {
+    flex: 1 1 100%;
+  }
+}
+
+.zoom-img {
+  display: inline-block;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.zoom-img:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 255, 231, 0.5);
+}
