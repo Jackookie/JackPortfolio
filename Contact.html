@@ -1,78 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Me</title>
-  <link rel="stylesheet" href="Contact.css" />
+  <link rel="stylesheet" href="Contact.css">
 </head>
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
   <header>
-    <h1>Contact Me</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">← Back to Home</a></li>
-      </ul>
+      <a href="index.html">← Back to Home</a>
     </nav>
   </header>
 
-  <main class="contact-container">
-    <div class="profile-section">
-      <img src="Jack.jpeg" alt="Jack's Profile Picture" class="contact-pic" />
-      <h2>Jackrianto Jeibi</h2>
-      <p>Email: <a href="mailto:jackkarma4@gmail.com">jackkarma4@gmail.com</a></p>
-      <p>LinkedIn: 
-  <a href="https://www.linkedin.com/in/jackrianto-jeibi/" target="_blank">
-    Jackrianto</a>
-</p>
+  <main>
+    <section class="profile-card">
+      <img src="Jack.jpeg" alt="Profile Picture" class="profile-pic">
+      <h1>Jackrianto Jeibi</h1>
 
-    </div>
-
-    <div class="skills-section">
-      <h3>Proficiency</h3>
-      <div class="skill">
-        <span>Unity</span>
-        <div class="rating">6 / 10</div>
-      </div>
-      <div class="skill">
-        <span>HTML, CSS, JavaScript</span>
-        <div class="rating">5 / 10</div>
-      </div>
-      <div class="skill">
-        <span>Programming</span>
-        <div class="rating">5 / 10</div>
-      </div>
-      <div class="skill">
-        <span>Self-Taught</span>
-        <div class="rating">8 / 10</div>
-      </div>
-      <div class="skill">
-        <span>Video Editing</span>
-        <div class="rating">5 / 10</div>
-      </div>
-    </div>
-
-    <div class="certifications-section">
-  <h3>Certifications</h3>
-  <div class="cert-item">
-    <span>Unity Essentials Pathway – Unity</span>
-    <a href="https://www.credly.com/go/4i1Bs8qm" target="_blank" class="cert-btn">View</a>
-  </div>
-  <div class="cert-item">
-    <span>Foundational C# with Microsoft – FreeCodeCamp with Microsoft</span>
-    <a href="https://freecodecamp.org/certification/Jackrianto/foundational-c-sharp-with-microsoft" target="_blank" class="cert-btn">View</a>
-  </div>
-  <div class="cert-item">
-    <span>Coming Soon</span>
-    <a href="" target="_blank" class="cert-btn">View</a>
-  </div>
+      <div class="contact-row centered">
+  <a href="mailto:jackkarma4@gmail.com" class="contact-btn">
+    jackkarma4@gmail.com
+  </a>
+  <a href="https://www.linkedin.com/in/jackrianto-jeibi/" class="contact-btn">
+    💼 LinkedIn
+  </a>
 </div>
 
 
+      <div class="proficiency-section">
+        <h3>Proficiency</h3>
+        <ul class="proficiency-list">
+          <li><span>Unity</span><span class="rating">7/10</span></li>
+          <li><span>HTML, CSS, JavaScript</span><span class="rating">7/10</span></li>
+          <li><span>Programming</span><span class="rating">7/10</span></li>
+          <li><span>Self-Taught</span><span class="rating">8/10</span></li>
+          <li><span>Video Editing</span><span class="rating">5/10</span></li>
+        </ul>
+      </div>
+
+      <div class="certification-section">
+        <h3>Certifications</h3>
+        <p>Unity Essentials Pathway <a href="https://www.credly.com/badges/b8de5d45-179c-43df-8a98-7be2dc0a2316/print" class="view-button">View</a></p>
+        <p>Foundational C# with Microsoft <a href="https://www.freecodecamp.org/certification/Jackrianto/foundational-c-sharp-with-microsoft" class="view-button">View</a></p>
+        <p>Coming Soon</p>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Jack. All rights reserved.</p>
-  </footer>
+  <script src="Contact.js"></script>
 </body>
 </html>
