@@ -120,21 +120,22 @@ h1, h3 {
   justify-content: center;
   gap: 1rem;
   margin: 1.5rem 0 2rem;
-  flex-wrap: wrap; /* ✅ allow wrapping on smaller screens */
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
 }
 
 .contact-btn {
-  flex: 1 1 150px;
-  max-width: 200px;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
   background: linear-gradient(135deg, cyan, #00cccc);
   color: #121212;
-  padding: 0.6rem 1rem;
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0,255,255,0.2);
+  white-space: nowrap;  /* prevent breaking into two lines */
 }
 
 .contact-btn:hover {
@@ -222,13 +223,13 @@ body.light .contact-btn:hover {
   }
 
   .contact-row.centered {
-    flex-direction: column; /* ✅ stack vertically */
+    flex-direction: column; /* stack vertically */
     align-items: center;
   }
 
   .contact-btn {
-    max-width: 100%;
-    width: 100%;
+    width: auto;   /* ✅ fix: no more giant full-width buttons */
+    max-width: none;
   }
 
   .profile-pic {
